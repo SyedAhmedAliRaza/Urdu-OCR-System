@@ -43,16 +43,16 @@ It not only extracts Urdu text but also:
 
 ## 🏗️ System Architecture
 
-- Frontend (HTML/CSS/JS)
-<br>        ↓
-- Flask Backend (API)
-<br>        ↓
-- Preprocessing (OpenCV + PIL)
-<br>        ↓
-- OCR Engine (Tesseract - Urdu)
-<br>        ↓
-- Evaluation (JiWER)
-<br>        ↓
+- Frontend (HTML/CSS/JS)<br>
+&nbsp;&nbsp;↓
+- Flask Backend (API)<br>
+&nbsp;&nbsp;↓
+- Preprocessing (OpenCV + PIL)<br>
+&nbsp;&nbsp;↓
+- OCR Engine (Tesseract - Urdu)<br>
+&nbsp;&nbsp;↓
+- Evaluation (JiWER)<br>
+&nbsp;&nbsp;↓
 - JSON Response → UI Rendering
 
 ---
