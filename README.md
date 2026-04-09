@@ -1,68 +1,150 @@
-# 📄 Urdu-OCR System
+# 🚀 Lafz-Aashna — Urdu OCR & Evaluation System
 
-A Python-based OCR system for extracting **Urdu text** from PDFs and images using Tesseract, with preprocessing optimizations for Naskh Urdu scripts.
-
----
-
-## 🚀 Approach & Design Decisions
-- **Approach**:  
-  Developed a **Python-based OCR system** leveraging **Tesseract** to extract Urdu text from PDFs and images.
-- **Key Design Decisions**:  
-  - Used **Google Colab** for execution due to free GPU/CPU resources and pre-installed libraries.
-  - Applied **adaptive thresholding** for binarization to handle Naskh Urdu variations.
-  - Skipped memory-heavy deskewing after repeated Colab crashes to maintain stability.
+A full-stack OCR system designed to extract, evaluate, and interact with **Urdu text** from PDFs and images — built with a focus on **accuracy, usability, and real-world application**.
 
 ---
 
-## 🛠️ Tools, Frameworks & Libraries
+## 💡 Overview
 
-| Tool / Library | Purpose |
-|----------------|---------|
-| **Tesseract-OCR** | Core OCR engine with Urdu language support |
-| **OpenCV** | Image preprocessing (noise removal, CLAHE, thresholding) |
-| **Pillow (PIL)** | Image handling |
-| **pdf2image** | Convert PDFs to images |
-| **jiwer** | WER/CER evaluation |
-| **Google Colab** | Development environment |
+**Lafz-Aashna** goes beyond traditional OCR.
+
+It not only extracts Urdu text but also:
+- 📊 Measures extraction quality (WER & CER)
+- ⚡ Provides real-time feedback with confidence scores
+- 🎯 Delivers an interactive, user-friendly web interface
 
 ---
 
-## 📂 Dataset(s) Used / Created
-- **Primary Dataset**: `Urdu.pdf` (Naskh Urdu text)
-- **Evaluation File**: `ground_truth.txt` for accuracy testing
+## 🎯 Key Features
+
+- 📂 **Upload Support**
+  - Drag & drop PDFs or images
+  - Supports multi-page documents
+
+- 🧠 **Urdu OCR Processing**
+  - Tesseract with Urdu language model
+  - Optimized preprocessing pipeline
+
+- 📊 **Evaluation Metrics**
+  - Word Error Rate (WER)
+  - Character Error Rate (CER)
+  - Accepts **any named `.txt` file** as ground truth
+
+- 📈 **Confidence Scoring**
+  - Page-wise OCR confidence percentages
+
+- 🎨 **Modern UI/UX**
+  - Animated results rendering
+  - Copy-to-clipboard with smart pop-ups
+  - Scroll guidance with visual cues
+  - Real-time feedback (no page reloads)
 
 ---
 
-## 🖼️ Preprocessing Pipeline
-1. **Grayscale Conversion** – Simplifies image data  
-2. **Noise Removal** – Using `fastNlMeansDenoising`  
-3. **Contrast Enhancement** – Via **CLAHE**  
-4. **Adaptive Thresholding** – For binarization and text clarity  
+## 🏗️ System Architecture
+
+- Frontend (HTML/CSS/JS)
+↓
+- Flask Backend (API)
+↓
+- Preprocessing (OpenCV + PIL)
+↓
+- OCR Engine (Tesseract - Urdu)
+↓
+- Evaluation (JiWER)
+↓
+- JSON Response → UI Rendering
 
 ---
 
-## 📊 Accuracy Results & Outputs
-- **Initial Accuracy**:  
-  - **WER**: ~26%  
-  - **CER**: ~11%  
-- **Optimization Target**: WER < 20%  
-- **Sample Output**:  
-  - Extracted text saved in: `extracted_urdu_text.txt`  
-  - Compared against: `ground_truth.txt`
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|----------|------|
+| **Backend** | Flask (Python) |
+| **OCR Engine** | Tesseract OCR (Urdu) |
+| **Image Processing** | OpenCV, Pillow |
+| **PDF Handling** | pdf2image |
+| **Evaluation** | JiWER |
+| **Frontend** | HTML, CSS, JavaScript |
+| **Deployment** | Google Colab + Ngrok |
+
+---
+
+## ⚙️ Preprocessing Pipeline
+
+To improve OCR accuracy, the following steps are applied:
+
+1. **Resizing (if needed)** – Enhances low-resolution inputs  
+2. **Grayscale Conversion** – Simplifies image structure  
+3. **Gaussian Blur** – Reduces noise  
+4. **Adaptive Thresholding** – Improves Urdu text clarity  
+
+---
+
+## 📊 Evaluation Metrics
+
+- **WER (Word Error Rate)** → Measures word-level accuracy  
+- **CER (Character Error Rate)** → Measures character-level precision  
+
+📌 Supports both manual text input and uploaded `.txt` files for evaluation.
+
+---
+
+## 📸 Sample Output
+
+- Page-wise extracted Urdu text  
+- Confidence percentage bars  
+- Evaluation metrics (WER & CER)  
+- Interactive UI with copy functionality  
 
 ---
 
 ## ⚠️ Challenges Faced
-- Frequent **Google Colab crashes** due to memory limits  
-- **Inconsistent Naskh Urdu recognition** in certain fonts  
-- Lack of **font-specific training data**
+
+- Handling **Urdu script complexity** (ligatures, spacing)
+- Managing **OCR inconsistencies across fonts**
+- Debugging **Flask + Ngrok issues in Colab**
+- Ensuring smooth **frontend-backend communication**
+- Avoiding crashes while processing large PDFs
+
+---
+
+## 🔥 Key Improvements Over Initial Version
+
+- ✅ Transitioned from script → **full web application**
+- ✅ Added **evaluation metrics (WER/CER)**
+- ✅ Enabled **dynamic ground truth input**
+- ✅ Built **interactive UI with animations**
+- ✅ Implemented **confidence scoring system**
+- ✅ Improved **user experience significantly**
 
 ---
 
 ## 🔮 Future Improvements
-- Train **Tesseract** with a **Naskh-specific dataset**
-- Add **deskewing** with memory-optimized processing
-- Move to a **more powerful cloud service** (AWS, GCP, Azure)
+
+- 🧠 Fine-tune Tesseract with **Urdu-specific datasets**
+- 📚 Support multiple Urdu fonts (**Naskh, Nastaliq**)
+- ⚡ Optimize for large-scale document processing
+- ☁️ Deploy on cloud infrastructure (AWS/GCP)
+- 🤖 Integrate AI-based post-processing for correction
+
+---
+
+## 🎯 Use Cases
+
+- 📄 Digitizing Urdu documents  
+- 🏛️ Archival & historical text processing  
+- 🏥 Form/document automation in local languages  
+- 📚 Educational tools for Urdu text analysis  
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork, improve, or suggest enhancements!
+
+---
 
 ## 💻 How to Run 
 
