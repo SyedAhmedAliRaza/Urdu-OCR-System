@@ -120,21 +120,6 @@ To improve OCR accuracy, the following steps are applied:
 
 ---
 
-## 🎯 Use Cases
-
-- 📄 Digitizing Urdu documents  
-- 🏛️ Archival & historical text processing  
-- 🏥 Form/document automation in local languages  
-- 📚 Educational tools for Urdu text analysis  
-
----
-
-## 🤝 Contributing
-
-Feel free to fork, improve, or suggest enhancements!
-
----
-
 ## 💻 How to Run 
 
 Use the following link on Google Colab:
