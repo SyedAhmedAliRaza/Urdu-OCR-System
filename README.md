@@ -44,7 +44,7 @@ It not only extracts Urdu text but also:
 ## 🏗️ System Architecture
 
 - Frontend (HTML/CSS/JS)<br>
-&nbsp;&nbsp;↓
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓
 - Flask Backend (API)<br>
 &nbsp;&nbsp;↓
 - Preprocessing (OpenCV + PIL)<br>
