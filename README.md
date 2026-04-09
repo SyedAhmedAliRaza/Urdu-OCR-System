@@ -44,15 +44,15 @@ It not only extracts Urdu text but also:
 ## 🏗️ System Architecture
 
 - Frontend (HTML/CSS/JS)
-↓
+<br>        ↓
 - Flask Backend (API)
-↓
+<br>        ↓
 - Preprocessing (OpenCV + PIL)
-↓
+<br>        ↓
 - OCR Engine (Tesseract - Urdu)
-↓
+<br>        ↓
 - Evaluation (JiWER)
-↓
+<br>        ↓
 - JSON Response → UI Rendering
 
 ---
@@ -107,18 +107,7 @@ To improve OCR accuracy, the following steps are applied:
 - Debugging **Flask + Ngrok issues in Colab**
 - Ensuring smooth **frontend-backend communication**
 - Avoiding crashes while processing large PDFs
-
----
-
-## 🔥 Key Improvements Over Initial Version
-
-- ✅ Transitioned from script → **full web application**
-- ✅ Added **evaluation metrics (WER/CER)**
-- ✅ Enabled **dynamic ground truth input**
-- ✅ Built **interactive UI with animations**
-- ✅ Implemented **confidence scoring system**
-- ✅ Improved **user experience significantly**
-
+  
 ---
 
 ## 🔮 Future Improvements
